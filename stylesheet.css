@@ -1,0 +1,87 @@
+@font-face {
+    font-family: balgruf;
+    src: url(Balgruf.otf);
+}
+
+@font-face {
+    font-family: balgruf_italic;
+    src: url(Balgruf_Italic.otf);
+    font-weight: italic;
+}
+
+@font-face {
+    font-family: futura_condensed;
+    src: url(Futura\ PT\ Cond\ Book.ttf);
+}
+
+
+body, html {
+    font-family: futura_condensed;
+    color: rgba(193,193,193,255);
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.column {
+  flex: 1;
+  /* border: 1px solid #ccc; */
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#logo {
+    margin-left: 150%;
+    height: 60%;
+}
+
+.main-option {
+    padding: 6px;
+    margin: 0;
+    width: 200px;
+    font-size: 2.5rem;
+}
+
+a {
+    color: rgba(193,193,193,255);
+    text-decoration: none;
+    opacity: 75%;
+}
+
+a:hover {
+    opacity: 100%;
+    font-size: 3rem;
+}
+
+.standard {
+    opacity: 100%;
+    color: blue;
+}
+
+.standard:hover {
+    font-size: 1.5rem;
+}
+
+.footer {
+    font: balgruf;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font-size: 1.5rem;
+}
+
+.footer p {
+    margin: 10px;
+}
