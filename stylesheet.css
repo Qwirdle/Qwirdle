@@ -41,13 +41,27 @@ body, html {
 }
 
 #logo {
-    margin-left: 150%;
-    height: 60%;
+    margin-left: 20%;
+    margin-bottom: 50%;
+    text-align: center;
+}
+
+.big {
+    font-size: 2rem;
+}
+
+.name {
+    font-size: 8rem;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 .main-option {
     padding: 6px;
     margin: 0;
+    margin-left: 40%;
     width: 200px;
     font-size: 2.5rem;
 }
@@ -65,7 +79,7 @@ a:hover {
 
 .standard {
     opacity: 100%;
-    color: blue;
+    color: #0000EE;
 }
 
 .standard:hover {
