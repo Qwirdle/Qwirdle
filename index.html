@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qwirdle's Portfolio</title>
-
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -17,14 +16,34 @@
             <div id="logo">
                 <h1 class="big no-margin">The Elder Scrolls V: Portfolio Edition</h1>
                 <h1 class="name no-margin">Jasper Haas</h1>
+                <br>
+                <h2 class="no-margin">Student programmer and aspiring full stack developer</h2>
             </div>
         </div>
         <div class="column">
-            <h1 class="main-option"><a href="">About Me</a></h1>
-            <h1 class="main-option"><a href="">Projects</a></h1>
-            <h1 class="main-option"><a href="resume.pdf" target="_blank">Resume</a></h1>
-            <h1 class="main-option"><a href="https://github.com/Qwirdle" target="_blank" rel="noopener noreferrer">Github</a></h1>
+            <div id="options">
+                <a href="" class="main-option">About Me</a>
+                <a href="" class="main-option">Projects</a>
+                <a href="resume.pdf" target="_blank" class="main-option">Resume</a>
+                <a href="https://github.com/Qwirdle" target="_blank" rel="noopener noreferrer" class="main-option">Github</a>
+            </div>
         </div>
     </div>
+
+    <audio id="hover-sound-effect" src="click.mp3" preload="auto"></audio>
+    <script>
+        const links = document.querySelectorAll('.main-option');
+        const audio = document.getElementById('hover-sound-effect');
+    
+        links.forEach(link => {
+          link.addEventListener('mouseenter', () => {
+            audio.currentTime = 0;
+            audio.play().catch(error => {
+                // If audio can't play, log error (optional, for debugging)
+                console.log('Audio play failed: ', error);
+            });
+          });
+        });
+    </script>
 </body>
 </html>

@@ -42,7 +42,7 @@ body, html {
 
 #logo {
     margin-left: 20%;
-    margin-bottom: 50%;
+    margin-bottom: 40%;
     text-align: center;
 }
 
@@ -61,33 +61,48 @@ body, html {
 .main-option {
     padding: 6px;
     margin: 0;
-    margin-left: 40%;
+    font-size: 2.7rem;
     width: 200px;
-    font-size: 2.5rem;
 }
 
 a {
     color: rgba(193,193,193,255);
     text-decoration: none;
-    opacity: 75%;
+    opacity: 0.75;
+    display: inline-block;
+    transform-origin: right center;
+    transition: color 0.1s ease, transform 0.1s ease, opacity 0.1s ease;
 }
 
 a:hover {
-    opacity: 100%;
-    font-size: 3rem;
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .standard {
     opacity: 100%;
     color: #0000EE;
+    transition: none;
 }
 
 .standard:hover {
-    font-size: 1.5rem;
+    transform: none;
+}
+
+#options {
+    margin-left: 40%;
+
+    flex: 1;
+    /* border: 1px solid #ccc; */
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .footer {
-    font: balgruf;
+    
 
     position: absolute;
     bottom: 0;
@@ -96,6 +111,11 @@ a:hover {
     font-size: 1.5rem;
 }
 
+.alt {
+    font-family: balgruf;
+}
+
 .footer p {
+    font: balgruf;
     margin: 10px;
 }
