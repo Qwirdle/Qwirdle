@@ -20,24 +20,34 @@
         <p>Contact me at <a href="mailto:jhaas0953@gmail.com" class="standard">jhaas0953@gmail.com</a> if you have any questions (or job offers, rent's expensive)</p>
     </div>
 
-    <div class="container">
-        <div class="column">
-            <div id="logo">
-                <h1 class="big no-margin">The Elder Scrolls V: Portfolio Edition</h1>
-                <h1 class="name no-margin">Jasper Haas</h1>
-                <br>
-                <h2 class="no-margin">Student programmer and aspiring full stack developer</h2>
+    <span id="home" style="display: none;">
+        <div class="container">
+            <div class="column">
+                <div id="logo">
+                    <h1 class="big no-margin">The Elder Scrolls V: Portfolio Edition</h1>
+                    <h1 class="huge no-margin">Jasper Haas</h1>
+                    <br>
+                    <h2 class="no-margin">Student programmer and aspiring full stack developer</h2>
+                </div>
+            </div>
+            <div class="column">
+                <div id="options">
+                    <a href="" class="main-option">About Me</a>
+                    <a href="" class="main-option">Projects</a>
+                    <a href="resume.pdf" target="_blank" class="main-option">Resume</a>
+                    <a href="https://github.com/jasperhaas0953" target="_blank" rel="noopener noreferrer" class="main-option">Github</a>
+                </div>
             </div>
         </div>
-        <div class="column">
-            <div id="options">
-                <a href="" class="main-option">About Me</a>
-                <a href="" class="main-option">Projects</a>
-                <a href="resume.pdf" target="_blank" class="main-option">Resume</a>
-                <a href="https://github.com/Qwirdle" target="_blank" rel="noopener noreferrer" class="main-option">Github</a>
+    </span>
+
+    <span>
+        <div class="container">
+            <div class="column">
+                <h1 class="huge">Projects</h1>
             </div>
         </div>
-    </div>
+    </span>
 
     <audio id="hover-sound-effect" src="click.mp3" preload="auto"></audio>
     <script>
@@ -47,10 +57,7 @@
         links.forEach(link => {
           link.addEventListener('mouseenter', () => {
             audio.currentTime = 0;
-            audio.play().catch(error => {
-                // If audio can't play, log error (optional, for debugging)
-                console.log('Audio play failed: ', error);
-            });
+            audio.play();
           });
         });
     </script>
@@ -68,24 +75,18 @@
         canvas.height = window.innerHeight;
         }
 
-        // Initial resize
         resizeCanvas();
 
-        // Resize on window change
         window.addEventListener('resize', resizeCanvas);
 
-        const party = SmokeMachine(ctx, [255, 255, 255]); // light gray
+        const party = SmokeMachine(ctx, [65, 65, 65]);
         setInterval(() => {
             for (let i = 0; i < 10; i++) {
                 const x = (window.innerWidth / 10) * i + (window.innerWidth / 20);
-                party.addSmoke(x, window.innerHeight + 450, 2); // starting just below the screen
+                party.addSmoke(x, window.innerHeight + 400, 2);
             }
         }, 1000);
         party.start();
-
-        console.log('SmokeMachine:', SmokeMachine);
     </script>
 </body>
 </html>
-
-
