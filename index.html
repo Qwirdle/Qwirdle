@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qwirdle's Portfolio</title>
+    <title>Jasper Haas</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+    <canvas id="canvas"></canvas>
+
+    
     <div class="footer">
         <p>This website is in no way affiliated with Bethesda or the Elder Scrolls franchise - Contact me at <a href="mailto:jhaas0953@gmail.com" class="standard">jhaas0953@gmail.com</a> if you have any questions (or job offers, rent's expensive)</p>
     </div>
@@ -44,6 +53,37 @@
             });
           });
         });
+    </script>
+    
+
+    <script src="smoke.js"></script>
+    <script>
+        var canvas = document.getElementById('canvas')
+        var ctx = canvas.getContext('2d')
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        }
+
+        // Initial resize
+        resizeCanvas();
+
+        // Resize on window change
+        window.addEventListener('resize', resizeCanvas);
+
+        const party = SmokeMachine(ctx, [45, 45, 45]); // light gray
+        setInterval(() => {
+            for (let i = 0; i < 10; i++) {
+                const x = (window.innerWidth / 10) * i + (window.innerWidth / 20);
+                party.addSmoke(x, window.innerHeight + 450, 2); // starting just below the screen
+            }
+        }, 1000);
+        party.start();
+
+        console.log('SmokeMachine:', SmokeMachine);
     </script>
 </body>
 </html>

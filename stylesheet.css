@@ -14,6 +14,15 @@
     src: url(Futura\ PT\ Cond\ Book.ttf);
 }
 
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+}
 
 body, html {
     font-family: futura_condensed;
@@ -22,7 +31,10 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .container {
