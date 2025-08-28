@@ -74,7 +74,7 @@
         // Resize on window change
         window.addEventListener('resize', resizeCanvas);
 
-        const party = SmokeMachine(ctx, [45, 45, 45]); // light gray
+        const party = SmokeMachine(ctx, [255, 255, 255]); // light gray
         setInterval(() => {
             for (let i = 0; i < 10; i++) {
                 const x = (window.innerWidth / 10) * i + (window.innerWidth / 20);
@@ -87,3 +87,4 @@
     </script>
 </body>
 </html>
+
